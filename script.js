@@ -5,13 +5,14 @@ response.then((contests) => {
 }).then((contests) => {
   console.log(contests)
   ihtml = ""
+  let i = 1;
   for (item in contests) {
     console.log(contests[item])
     ihtml += `
          <div class="card" style="width: 20rem;">
       <img src="programming contest.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Programming Contest</h5>
+        <h5 class="card-title">Programming Contest ${i++}</h5>
         <p class="card-text">These are the details of the contest ( ${contests[item].name} ),For more information visit the link </p>
       </div>
       <ul class="list-group list-group-flush">
